@@ -1,0 +1,41 @@
+name: Require release label
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+      - unlabeled
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  require-release-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require exactly one version label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const allowed = new Set(['major', 'minor', 'patch']);
+            const labels = context.payload.pull_request.labels.map(({ name }) => name);
+            const selected = labels.filter((label) => allowed.has(label));
+
+            if (selected.length !== 1) {
+              throw new Error(
+                `PRs into main require exactly one release label: major, minor, or patch. Found: ${selected.join(', ') || 'none'}.`,
+              );
+            }
+
+      - uses: actions/checkout@v4
+
+      - name: Validate theme JSON
+        run: |
+          jq empty package.json
+          jq empty "themes/Evoke Aurora-color-theme.json"
