@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evoke Aurora — HTML playground</title>
+    <style>
+      :root { --aurora-mint: #CFFFE7; --night-sky: rgb(38 39 38); }
+      .aurora-card[data-visible="true"]:hover::before { content: "✦"; color: var(--aurora-mint); }
+    </style>
+  </head>
+  <body>
+    <!-- Elements, attributes, IDs/classes, entities, and embedded JavaScript. -->
+    <main id="sky" class="aurora-card" data-visible="true">
+      <h1>Evoke <em>Aurora</em> &amp; code</h1>
+      <time datetime="2026-08-31T22:15:00Z">Tonight</time>
+      <input type="color" value="#CFFFE7" aria-label="Aurora color" />
+    </main>
+    <script type="module">
+      const shades = ["mint", "violet", "blue"];
+      const paint = (shade) => `aurora-${shade}`;
+      document.querySelector("#sky").dataset.shade = paint(shades.at(0));
+    </script>
+  </body>
+</html>

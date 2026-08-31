@@ -1,0 +1,23 @@
+/* Selectors, custom properties, at-rules, values, functions, and pseudo-elements. */
+:root {
+  --night-sky: #262726;
+  --aurora-mint: #CFFFE7;
+  --aurora-violet: hsl(252 38% 56%);
+}
+
+.aurora-card[data-visible="true"] {
+  display: grid;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  padding: calc(1rem + 2px);
+  color: var(--aurora-mint);
+  background: linear-gradient(135deg, var(--night-sky), var(--aurora-violet));
+}
+
+.aurora-card:hover::before {
+  content: "✦";
+  filter: drop-shadow(0 0 0.5rem currentColor);
+}
+
+@media (width >= 48rem) {
+  .aurora-card { border-inline-start: 3px solid color-mix(in srgb, var(--aurora-mint), transparent 30%); }
+}

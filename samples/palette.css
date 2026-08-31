@@ -1,0 +1,45 @@
+/*
+ * Evoke Aurora palette playground
+ *
+ * Open this file in the Extension Development Host to see VS Code color
+ * decorators beside each value. The Sky Blue candidate is not assigned to
+ * a theme role yet.
+ */
+
+:root {
+  /* Night surfaces */
+  --night-canopy: #1F1F1F;
+  --polar-charcoal: #181818;
+  --graphite-shelf: #202020;
+  --slate-hollow: #2B2B2B;
+  --control-stone: #313131;
+  --ridge-shadow: #3C3C3C;
+  --distant-haze: #6B7189;
+  --moonlight: #DCE8FF;
+  --snowglow: #F4F0FF;
+
+  /* Aurora violets */
+  --twilight-violet: #7765B8;
+  --aurora-violet: #8A64F0;
+  --crown-violet: #9B7BFF;
+  --orchid-haze: #B99CFF;
+
+  /* Sky and glacier blues */
+  --boreal-blue: #469AF9;
+  --glacier-blue: #84B5F2;
+  --ice-blue: #8FC0F5;
+  --frost-blue: #C9DFEE;
+  --sky-blue-candidate: #9CDCFE;
+
+  /* Aurora greens and mints */
+  --pine-needle: #58B982;
+  --aurora-mint: #62FDC3;
+  --boreal-green: #96F1A3;
+  --pale-mint: #CFFFE7;
+
+  /* Accent and data colors */
+  --polar-pink: #DF9DFC;
+  --lantern-gold: #FCE79E;
+  --signal-yellow: #FFEE58;
+  --coral-flare: #FA746F;
+}

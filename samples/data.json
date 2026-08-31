@@ -1,0 +1,12 @@
+{
+  "name": "Evoke Aurora",
+  "version": 1,
+  "enabled": true,
+  "palette": {
+    "night": "#262726",
+    "mint": "#CFFFE7",
+    "violet": "#B99CFF"
+  },
+  "shades": ["mint", "violet", "blue"],
+  "inactive": null
+}

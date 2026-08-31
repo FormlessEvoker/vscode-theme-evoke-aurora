@@ -1,0 +1,41 @@
+{
+  "name": "evoke-aurora-theme",
+  "displayName": "Evoke Aurora",
+  "description": "A dark, graphite Aurora Borealis color theme for Visual Studio Code.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.134.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark theme",
+    "aurora",
+    "northern lights",
+    "color theme"
+  ],
+  "galleryBanner": {
+    "color": "#181818",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormlessEvoker/vscode-theme-evoke-aurora.git"
+  },
+  "homepage": "https://github.com/FormlessEvoker/vscode-theme-evoke-aurora#readme",
+  "bugs": {
+    "url": "https://github.com/FormlessEvoker/vscode-theme-evoke-aurora/issues"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Evoke Aurora",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Evoke Aurora-color-theme.json"
+      }
+    ]
+  }
+}
