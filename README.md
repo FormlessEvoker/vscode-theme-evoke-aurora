@@ -73,6 +73,9 @@ Evoke Aurora is designed to be freely shared as a VSIX through GitHub Releases; 
 Visual Studio Marketplace publisher is required. See `RELEASING.md` for the build,
 verification, and distribution checklist.
 
+Pull requests into `main` require exactly one release label: `major`, `minor`, or
+`patch`. Merging a labeled PR builds a VSIX and creates the matching GitHub Release.
+
 ## License
 
 MIT — see `LICENSE`.

@@ -3,6 +3,22 @@
 Evoke Aurora is distributed directly as a VSIX. It does not require a Visual
 Studio Marketplace publisher.
 
+## Automated releases
+
+Every pull request targeting `main` must have exactly one of these labels:
+
+- `major`
+- `minor`
+- `patch`
+
+The label-check workflow rejects missing or conflicting labels. When the PR merges,
+the release workflow bumps `package.json`, commits the new version, creates a
+matching `vX.Y.Z` tag, packages the VSIX, and attaches it to a GitHub Release.
+
+Repository administrators must protect `main` and require the **Require release
+label / require-release-label** status check. GitHub Actions must also be allowed to
+create commits and tags with the repository `GITHUB_TOKEN`.
+
 ## Prerequisites
 
 - Node.js 20 or later
